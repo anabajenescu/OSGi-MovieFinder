@@ -20,7 +20,7 @@ public class AdvancedMovieFinderActivator implements BundleActivator {
 	}
 
 	public void start(BundleContext bundleContext) throws Exception {
-System.out.println("AdvancedMovieFinderActivator: start");
+		System.out.println("AdvancedMovieFinderActivator: start");
 		
 		MovieFinder movieFinder = new AdvancedMovieFinderImpl();
 		Dictionary properties = new Properties();
