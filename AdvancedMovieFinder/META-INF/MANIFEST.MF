@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AdvancedMovieFinder
+Bundle-SymbolicName: advancedmoviefinder.AdvancedMovieFinder
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: advancedmoviefinder.AdvancedMovieFinderActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: advancedmoviefinder.AdvancedMovieFinder
+Import-Package: moviefinder, org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Finder-Extension-Name: AdvancedFinder
+Extension-Class: advancedmoviefinder.AdvancedMovieFinderImpl
+
