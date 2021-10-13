@@ -4,7 +4,7 @@ Bundle-Name: SimpleMovieFinderImpl
 Bundle-SymbolicName: org.anabajenescu.osgi.SimpleMovieFinderImpl
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.anabajenescu.osgi.simplemoviefinderimpl.SimpleMovieFinderActivator
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: org.anabajenescu.osgi.SimpleMovieFinderImpl
 Import-Package: org.anabajenescu.osgi.moviefinder,
  org.osgi.framework;version="[1.0.0,2.0.0)"
