@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MovieFinder
+Bundle-SymbolicName: MovieFinder
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: moviefinder.MovieListerActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: MovieFinder
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.osgi
