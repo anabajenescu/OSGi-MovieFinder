@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SimpleMovieFinder
+Bundle-SymbolicName: simplemoviefinder.SimpleMovieFinder
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: simplemoviefinder.SimpleMovieFinderActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: simplemoviefinder.SimpleMovieFinder
+Import-Package: moviefinder, org.osgi.framework;version="[1.0.0,2.0.0)"
+Bundle-ActivationPolicy: lazy
+Finder-Extension-Name: SimpleFinder
+Extension-Class: simplemoviefinder.SimpleMovieFinderImpl
+
