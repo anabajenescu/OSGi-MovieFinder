@@ -6,7 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: moviefinder.MovieListerActivator
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: moviefinder.MovieFinder
-Import-Package: org.osgi.framework;version="1.3.0"
+Import-Package: org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.5.2"
 Export-Package: moviefinder
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.osgi
