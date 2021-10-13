@@ -36,3 +36,26 @@ public class MovieListerImpl implements MovieLister {
 	}
 
 }
+
+//Version 2 - Search movies directed by desired director
+//public class MovieListerImpl implements MovieLister {
+//
+//	private final MovieFinder movieFinder;
+//
+//	public MovieListerImpl(MovieFinder movieFinder) { 
+//		this.movieFinder = movieFinder; 
+//	}
+//	
+//	@Override
+//	public List<Movie> listByDirector(String name) {
+//		System.out.println("MovieListerImpl.listByDirector with name " + name + " - preparing to get service");
+//		return searchMovies(name, movieFinder);
+//
+//	}
+//	
+//	private List<Movie> searchMovies(String name, MovieFinder movieFinder) {
+//		List<Movie> allMovies = movieFinder.findAll();
+//		
+//		return allMovies.stream().filter(m -> m.getDirectedBy().equals(name)).collect(Collectors.toList());
+//	}
+//}

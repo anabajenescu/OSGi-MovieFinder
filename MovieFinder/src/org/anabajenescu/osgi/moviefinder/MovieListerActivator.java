@@ -6,6 +6,8 @@ import org.anabajenescu.osgi.movielistener.MovieListener;
 import org.anabajenescu.osgi.movielistener.Movies;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+import org.osgi.util.tracker.ServiceTracker;
 
 public class MovieListerActivator implements BundleActivator {
 
@@ -23,7 +25,6 @@ public class MovieListerActivator implements BundleActivator {
 		return context;
 	}
 
-	//TODO register services and perform searches
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
 		System.out.println("MovieListerActivator: start");
@@ -63,3 +64,63 @@ public class MovieListerActivator implements BundleActivator {
 	}
 
 }
+
+//Version 2 - Search movies directed by desired director
+//public class MovieListerActivator implements BundleActivator {
+//
+//	private static BundleContext context;
+//	
+//	static BundleContext getContext() {
+//		return context;
+//	}
+//	
+//	private ServiceTracker<MovieFinder, MovieFinder> serviceTracker;
+//	private ServiceRegistration<?> serviceRegistration;
+//
+//	@Override
+//	public void start(BundleContext bundleContext) throws Exception {
+//		System.out.println("MovieListerActivator: start");
+//		serviceTracker = new ServiceTracker<MovieFinder, MovieFinder>(bundleContext, MovieFinder.class.getName(), null);
+//		serviceTracker.open();
+//
+//		System.out.println("MovieListerActivator: Create and register MovieListerImpl");
+//		final MovieLister movieLister = new MovieListerImpl(serviceTracker.getService());
+//		serviceRegistration = context.registerService(MovieLister.class.getName(), movieLister, null);
+//
+//		System.out.println("MovieListerActivator: Search using that lister");
+//		search(movieLister);
+//		
+//		MovieListerActivator.context = bundleContext;
+//	}
+//
+//	@Override
+//	public void stop(BundleContext bundleContext) throws Exception {
+//		System.out.println("MovieListerActivator: Uunregister serviceRegistration");
+//		serviceRegistration.unregister();
+//
+//		System.out.println("MovieListerActivator: Close serviceTracker");
+//		serviceTracker.close();
+//		
+//		MovieListerActivator.context = null;
+//	}
+//	
+//	private void search(MovieLister movieLister) {
+//		System.out.println("MovieListerActivator: Start searching");
+//		
+//		// search for movies directed by a director from SimpleMovieFinder
+//		List<Movie> movies = movieLister.listByDirector("Peter Jackson");
+//		if (movies.isEmpty()) {
+//			System.err.println("MovieListerActivator:Could not get any movies");
+//		} else {
+//			movies.forEach(m -> System.out.println("MovieListerActivator: Movie name: " + m.getName()));
+//		}
+//		
+//		// search for movies directed by a director from AdvancedMovieFinder
+//		movies = movieLister.listByDirector("Taika Waititi");
+//		if (movies.isEmpty()) {
+//			System.err.println("MovieListerActivator:Could not get any movies");
+//		} else {
+//			movies.forEach(m -> System.out.println("MovieListerActivator: Movie name: " + m.getName()));
+//		}
+//	}
+//}
