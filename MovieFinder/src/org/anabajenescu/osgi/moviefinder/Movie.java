@@ -1,4 +1,4 @@
-package moviefinder;
+package org.anabajenescu.osgi.moviefinder;
 
 public class Movie {
 	

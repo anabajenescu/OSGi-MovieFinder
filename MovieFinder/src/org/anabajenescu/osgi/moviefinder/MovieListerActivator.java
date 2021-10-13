@@ -1,12 +1,11 @@
-package moviefinder;
+package org.anabajenescu.osgi.moviefinder;
 
 import java.util.List;
 
+import org.anabajenescu.osgi.movielistener.MovieListener;
+import org.anabajenescu.osgi.movielistener.Movies;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-
-import movielister.MovieListener;
-import movielister.Movies;
 
 public class MovieListerActivator implements BundleActivator {
 

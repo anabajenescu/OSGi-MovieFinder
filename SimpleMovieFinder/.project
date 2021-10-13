@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SimpleMovieFinder</name>
+	<name>org.anabajenescu.osgi.SimpleMovieFinderImpl</name>
 	<comment></comment>
 	<projects>
 	</projects>

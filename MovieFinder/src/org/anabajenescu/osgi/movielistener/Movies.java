@@ -1,10 +1,10 @@
-package movielister;
+package org.anabajenescu.osgi.movielistener;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import moviefinder.MovieFinder;
+import org.anabajenescu.osgi.moviefinder.MovieFinder;
 
 public class Movies {
 

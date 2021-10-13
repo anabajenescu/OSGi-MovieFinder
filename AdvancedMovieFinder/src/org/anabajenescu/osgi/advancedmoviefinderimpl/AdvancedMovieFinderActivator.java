@@ -1,13 +1,12 @@
-package advancedmoviefinder;
+package org.anabajenescu.osgi.advancedmoviefinderimpl;
 
 import java.util.Dictionary;
 import java.util.Properties;
 
+import org.anabajenescu.osgi.moviefinder.MovieFinder;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
-
-import moviefinder.MovieFinder;
 
 public class AdvancedMovieFinderActivator implements BundleActivator {
 

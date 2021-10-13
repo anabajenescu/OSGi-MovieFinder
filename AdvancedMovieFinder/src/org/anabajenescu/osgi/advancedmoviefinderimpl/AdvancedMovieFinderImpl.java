@@ -1,10 +1,10 @@
-package advancedmoviefinder;
+package org.anabajenescu.osgi.advancedmoviefinderimpl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import moviefinder.Movie;
-import moviefinder.MovieFinder;
+import org.anabajenescu.osgi.moviefinder.Movie;
+import org.anabajenescu.osgi.moviefinder.MovieFinder;
 
 public class AdvancedMovieFinderImpl implements MovieFinder{
 	
